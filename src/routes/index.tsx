@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo.png.asset.json";
-import heroImg from "@/assets/hero-meat.jpg";
-import preparadosImg from "@/assets/preparados.jpg";
-import shopImg from "@/assets/shop-interior.jpg";
+import lojaExterior from "@/assets/loja-exterior.asset.json";
+import lojaEntrada from "@/assets/loja-entrada.asset.json";
+import carne1 from "@/assets/carne-1.asset.json";
+import ossobuco from "@/assets/ossobuco.asset.json";
+import hamburguer from "@/assets/hamburguer.asset.json";
+import cogumelos from "@/assets/cogumelos.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -31,8 +34,8 @@ function Index() {
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#sobre" className="hover:text-primary transition-colors">Sobre</a>
             <a href="#produtos" className="hover:text-primary transition-colors">Produtos</a>
+            <a href="#loja" className="hover:text-primary transition-colors">A Loja</a>
             <a href="#encomendas" className="hover:text-primary transition-colors">Encomendas</a>
-            <a href="#contacto" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
           <a href="#encomendas" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] hover:bg-accent transition-colors">
             Encomendar
@@ -49,9 +52,9 @@ function Index() {
               Parceiros · Leiria
             </div>
             <h1 className="mt-6 font-display text-5xl md:text-7xl font-black leading-[1.02] text-balance text-charcoal">
-              O sabor de família,
+              Os melhores cortes,
               <br />
-              <span className="script text-primary font-bold text-6xl md:text-8xl block mt-2">bem cortado.</span>
+              <span className="script text-primary font-bold text-6xl md:text-8xl block mt-2">do produtor para si.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
               Um talho familiar dedicado à venda de carnes frescas, preparados artesanais e produtos de qualidade — de produtores locais para a sua mesa.
@@ -69,10 +72,10 @@ function Index() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/20 via-transparent to-transparent blur-2xl" />
             <img
-              src={heroImg}
+              src={carne1.url}
               alt="Cortes de carne fresca"
               width={1600}
-              height={1200}
+              height={2000}
               className="relative rounded-3xl shadow-[var(--shadow-warm)] object-cover aspect-[4/5] w-full"
             />
             <div className="absolute -bottom-6 -left-6 bg-cream rounded-2xl p-5 shadow-[var(--shadow-soft)] border border-border max-w-[220px]">
@@ -88,10 +91,10 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 py-24 md:py-32 grid md:grid-cols-5 gap-12 items-center">
           <div className="md:col-span-2 relative">
             <img
-              src={shopImg}
-              alt="Interior do talho"
+              src={ossobuco.url}
+              alt="Ossobuco fresco"
               width={1400}
-              height={1000}
+              height={1800}
               loading="lazy"
               className="rounded-3xl shadow-[var(--shadow-soft)] object-cover aspect-[4/5] w-full"
             />
@@ -125,23 +128,28 @@ function Index() {
           </h2>
         </div>
 
+        {/* Product grid with real photos */}
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {[
-            { title: "Carnes frescas", desc: "Vaca, porco, borrego, aves — cortadas ao momento pelo talhante.", tag: "Diariamente" },
-            { title: "Preparados artesanais", desc: "Espetadas, hambúrgueres, marinados e recheios prontos a cozinhar.", tag: "Casa" },
-            { title: "Enchidos & fumeiro", desc: "Produtos regionais dos nossos produtores de confiança em Leiria.", tag: "Local" },
+            { img: carne1.url, title: "Carnes frescas", desc: "Vaca, porco, borrego e aves — cortadas ao momento pelo talhante.", tag: "Diariamente" },
+            { img: hamburguer.url, title: "Preparados artesanais", desc: "Hambúrgueres, espetadas, marinados e recheios prontos a cozinhar.", tag: "Casa" },
+            { img: cogumelos.url, title: "Ideias para o jantar", desc: "Sugestões prontas para levar direto do balcão para o forno.", tag: "Novidade" },
           ].map((p) => (
-            <article key={p.title} className="group rounded-3xl bg-card border border-border p-8 hover:shadow-[var(--shadow-warm)] transition-all hover:-translate-y-1">
-              <div className="inline-flex text-[10px] tracking-widest uppercase font-bold text-primary bg-secondary rounded-full px-3 py-1">{p.tag}</div>
-              <h3 className="mt-5 font-display text-2xl font-bold text-charcoal">{p.title}</h3>
-              <p className="mt-3 text-muted-foreground leading-relaxed">{p.desc}</p>
-              <div className="mt-6 h-px bg-gradient-to-r from-primary/40 to-transparent" />
+            <article key={p.title} className="group rounded-3xl bg-card border border-border overflow-hidden hover:shadow-[var(--shadow-warm)] transition-all hover:-translate-y-1">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="p-8">
+                <div className="inline-flex text-[10px] tracking-widest uppercase font-bold text-primary bg-secondary rounded-full px-3 py-1">{p.tag}</div>
+                <h3 className="mt-4 font-display text-2xl font-bold text-charcoal">{p.title}</h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">{p.desc}</p>
+              </div>
             </article>
           ))}
         </div>
 
         <div className="mt-16 relative rounded-3xl overflow-hidden">
-          <img src={preparadosImg} alt="Preparados artesanais" width={1200} height={1400} loading="lazy" className="w-full h-[420px] md:h-[520px] object-cover" />
+          <img src={ossobuco.url} alt="Preparados artesanais" loading="lazy" className="w-full h-[420px] md:h-[520px] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="px-8 md:px-16 max-w-xl">
@@ -153,6 +161,39 @@ function Index() {
                 Diga-nos o que precisa — preparamos ao seu gosto.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* A Loja */}
+      <section id="loja" className="bg-cream border-y border-border">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="max-w-2xl">
+            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">A nossa casa</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold text-charcoal text-balance">
+              Venha conhecer-nos <span className="script text-primary">nos Parceiros</span>.
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground">
+              Tradição, frescura e qualidade — dos melhores produtores, com cortes perfeitos e sabores únicos.
+            </p>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-5 gap-4">
+            <div className="md:col-span-3 rounded-3xl overflow-hidden shadow-[var(--shadow-soft)]">
+              <img src={lojaExterior.url} alt="Talho Dois Parceiros — fachada" loading="lazy" className="w-full h-full object-cover aspect-[4/3]" />
+            </div>
+            <div className="md:col-span-2 rounded-3xl overflow-hidden shadow-[var(--shadow-soft)]">
+              <img src={lojaEntrada.url} alt="Entrada da loja" loading="lazy" className="w-full h-full object-cover aspect-[4/3]" />
+            </div>
+          </div>
+
+          <div className="mt-10 grid sm:grid-cols-4 gap-4">
+            {["Tradição", "Frescura e qualidade", "Cortes perfeitos", "Sabores únicos"].map((v) => (
+              <div key={v} className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+                <div className="text-primary text-lg">★</div>
+                <div className="mt-1 font-display font-bold text-charcoal">{v}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -177,12 +218,12 @@ function Index() {
             </a>
           </div>
 
-          <p className="mt-8 text-sm text-cream/50">Contacte-nos via redes sociais — respondemos rapidamente.</p>
+          <p className="mt-8 text-sm text-cream/50">Respondemos rapidamente nos nossos canais.</p>
         </div>
       </section>
 
-      {/* Contacto / Footer */}
-      <footer id="contacto" className="bg-background">
+      {/* Footer */}
+      <footer className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-3 gap-12">
           <div>
             <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
