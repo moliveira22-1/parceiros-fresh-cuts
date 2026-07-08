@@ -124,6 +124,60 @@ function Index() {
         </div>
       </section>
 
+      {/* História */}
+      <section id="historia" className="bg-cream border-y border-border">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="max-w-2xl">
+            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">De 19 anos a hoje</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold text-charcoal text-balance">
+              A história de <span className="script text-primary">dois parceiros</span>.
+            </h2>
+          </div>
+
+          <div className="mt-14 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/15 via-transparent to-transparent blur-2xl" />
+              <img
+                src={equipa.url}
+                alt="A equipa do Talho Dois Parceiros ao balcão"
+                width={1600}
+                height={1200}
+                loading="lazy"
+                className="relative rounded-3xl shadow-[var(--shadow-soft)] object-cover aspect-[4/3] w-full"
+              />
+            </div>
+            <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                A história do <strong className="text-charcoal">Talho Dois Parceiros</strong> é mais do que um simples negócio. Começou há muitos anos no mercado de Leiria, onde ele, ainda adolescente, começou a sua jornada como talhante. Com apenas 19 anos, comprou o seu próprio talho e seguiu em frente, mas a vida tinha mais planos para ele.
+              </p>
+              <p>
+                Ela, filha de um cliente fiel, entrou na sua vida como quem não quer nada, e o que parecia um simples encontro, transformou-se num amor que nasceu entre cortes de carne fresca. Juntos, aprenderam, cresceram e, durante 20 anos, mantiveram a tradição viva, mas a vida levou-os a explorar novos caminhos.
+              </p>
+              <p>
+                Hoje, depois de algum tempo, estão de volta, mais fortes, mais apaixonados e prontos para partilhar com todos a arte e o amor que os uniu. O Talho Dois Parceiros é agora a nossa nova casa, onde a tradição, a qualidade e o amor pela carne nunca saem de moda. Venham fazer parte desta história.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 rounded-3xl bg-background border border-border p-8 md:p-12">
+            <blockquote className="max-w-4xl mx-auto text-center space-y-4">
+              <p className="font-display text-2xl md:text-3xl text-charcoal leading-relaxed">
+                "Há memórias que não se apagam... só mudam de lugar."
+              </p>
+              <div className="text-muted-foreground leading-relaxed space-y-2">
+                <p>Uma fotografia de outro tempo. De quando tudo começou.</p>
+                <p>Um jovem de 19 anos que comprou um talho e fez dele a sua vida. Depois veio ela e passou a ser a vida dos dois. Aprenderam juntos, trabalharam juntos, construíram juntos.</p>
+                <p>Em 2011, a crise obrigou a fechar este capítulo.</p>
+                <p>Mas há coisas que não morrem com uma porta fechada.</p>
+                <p>A paixão pelo ofício ficou. O saber fazer ficou. A vontade de voltar ficou.</p>
+                <p>E cá estamos.</p>
+                <p>Não é o mesmo espaço mas é a mesma essência. As mesmas mãos, o mesmo cuidado, a mesma dedicação de sempre.</p>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
       {/* Produtos */}
       <section id="produtos" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
         <div className="max-w-2xl">
