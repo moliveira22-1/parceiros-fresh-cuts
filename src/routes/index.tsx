@@ -283,7 +283,7 @@ function Index() {
 
       {/* Footer */}
       <footer className="bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-3 gap-12">
+        <div className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-4 gap-12">
           <div>
             <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
             <p className="mt-4 text-muted-foreground max-w-xs">
@@ -293,13 +293,24 @@ function Index() {
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Onde estamos</div>
             <p className="mt-4 font-display text-xl text-charcoal">Parceiros</p>
-            <p className="text-muted-foreground">Leiria, Portugal</p>
+            <p className="text-muted-foreground">{ADDRESS}</p>
+          </div>
+          <div>
+            <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Contactos</div>
+            <div className="mt-4 flex flex-col gap-2">
+              <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="font-display text-xl text-charcoal hover:text-primary transition-colors">
+                {PHONE}
+              </a>
+              <a href={`tel:${PHONE2.replace(/\s/g, "")}`} className="font-display text-xl text-charcoal hover:text-primary transition-colors">
+                {PHONE2}
+              </a>
+            </div>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Siga-nos</div>
             <div className="mt-4 flex flex-col gap-2">
               <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-charcoal hover:text-primary transition-colors">
-                <InstagramIcon /> @talho2parceiros
+                <InstagramIcon /> @talhodoisparceiros
               </a>
               <a href={FACEBOOK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-charcoal hover:text-primary transition-colors">
                 <FacebookIcon /> Talho Dois Parceiros
