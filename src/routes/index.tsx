@@ -6,6 +6,7 @@ import carne1 from "@/assets/carne-1.asset.json";
 import ossobuco from "@/assets/ossobuco.asset.json";
 import hamburguer from "@/assets/hamburguer.asset.json";
 import cogumelos from "@/assets/cogumelos.asset.json";
+import equipa from "@/assets/equipa.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -16,8 +17,11 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const INSTAGRAM = "https://www.instagram.com/talho2parceiros/";
-const FACEBOOK = "https://www.facebook.com/talho2parceiros/";
+const INSTAGRAM = "https://www.instagram.com/talhodoisparceiros/";
+const FACEBOOK = "https://www.facebook.com/profile.php?id=61569119907822&locale=pt_PT";
+const PHONE = "244 092 816";
+const PHONE2 = "919 540 615";
+const ADDRESS = "R. Sra. do Rosário 40, 2400-441 Parceiros";
 
 function Index() {
   return (
@@ -33,6 +37,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#sobre" className="hover:text-primary transition-colors">Sobre</a>
+            <a href="#historia" className="hover:text-primary transition-colors">História</a>
             <a href="#produtos" className="hover:text-primary transition-colors">Produtos</a>
             <a href="#loja" className="hover:text-primary transition-colors">A Loja</a>
             <a href="#encomendas" className="hover:text-primary transition-colors">Encomendas</a>
@@ -115,6 +120,60 @@ function Index() {
                 "Recebemos cada cliente como gostaríamos de ser recebidos: com simpatia, dedicação e um sorriso."
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* História */}
+      <section id="historia" className="bg-cream border-y border-border">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="max-w-2xl">
+            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">De 19 anos a hoje</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold text-charcoal text-balance">
+              A história de <span className="script text-primary">dois parceiros</span>.
+            </h2>
+          </div>
+
+          <div className="mt-14 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/15 via-transparent to-transparent blur-2xl" />
+              <img
+                src={equipa.url}
+                alt="A equipa do Talho Dois Parceiros ao balcão"
+                width={1600}
+                height={1200}
+                loading="lazy"
+                className="relative rounded-3xl shadow-[var(--shadow-soft)] object-cover aspect-[4/3] w-full"
+              />
+            </div>
+            <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                A história do <strong className="text-charcoal">Talho Dois Parceiros</strong> é mais do que um simples negócio. Começou há muitos anos no mercado de Leiria, onde ele, ainda adolescente, começou a sua jornada como talhante. Com apenas 19 anos, comprou o seu próprio talho e seguiu em frente, mas a vida tinha mais planos para ele.
+              </p>
+              <p>
+                Ela, filha de um cliente fiel, entrou na sua vida como quem não quer nada, e o que parecia um simples encontro, transformou-se num amor que nasceu entre cortes de carne fresca. Juntos, aprenderam, cresceram e, durante 20 anos, mantiveram a tradição viva, mas a vida levou-os a explorar novos caminhos.
+              </p>
+              <p>
+                Hoje, depois de algum tempo, estão de volta, mais fortes, mais apaixonados e prontos para partilhar com todos a arte e o amor que os uniu. O Talho Dois Parceiros é agora a nossa nova casa, onde a tradição, a qualidade e o amor pela carne nunca saem de moda. Venham fazer parte desta história.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 rounded-3xl bg-background border border-border p-8 md:p-12">
+            <blockquote className="max-w-4xl mx-auto text-center space-y-4">
+              <p className="font-display text-2xl md:text-3xl text-charcoal leading-relaxed">
+                "Há memórias que não se apagam... só mudam de lugar."
+              </p>
+              <div className="text-muted-foreground leading-relaxed space-y-2">
+                <p>Uma fotografia de outro tempo. De quando tudo começou.</p>
+                <p>Um jovem de 19 anos que comprou um talho e fez dele a sua vida. Depois veio ela e passou a ser a vida dos dois. Aprenderam juntos, trabalharam juntos, construíram juntos.</p>
+                <p>Em 2011, a crise obrigou a fechar este capítulo.</p>
+                <p>Mas há coisas que não morrem com uma porta fechada.</p>
+                <p>A paixão pelo ofício ficou. O saber fazer ficou. A vontade de voltar ficou.</p>
+                <p>E cá estamos.</p>
+                <p>Não é o mesmo espaço mas é a mesma essência. As mesmas mãos, o mesmo cuidado, a mesma dedicação de sempre.</p>
+              </div>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -218,13 +277,27 @@ function Index() {
             </a>
           </div>
 
+          <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-cream/70 text-sm">
+            <span className="inline-flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              {ADDRESS}
+            </span>
+            <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 hover:text-cream transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              {PHONE}
+            </a>
+            <a href={`tel:${PHONE2.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 hover:text-cream transition-colors">
+              {PHONE2}
+            </a>
+          </div>
+
           <p className="mt-8 text-sm text-cream/50">Respondemos rapidamente nos nossos canais.</p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-3 gap-12">
+        <div className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-4 gap-12">
           <div>
             <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
             <p className="mt-4 text-muted-foreground max-w-xs">
@@ -234,13 +307,24 @@ function Index() {
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Onde estamos</div>
             <p className="mt-4 font-display text-xl text-charcoal">Parceiros</p>
-            <p className="text-muted-foreground">Leiria, Portugal</p>
+            <p className="text-muted-foreground">{ADDRESS}</p>
+          </div>
+          <div>
+            <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Contactos</div>
+            <div className="mt-4 flex flex-col gap-2">
+              <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="font-display text-xl text-charcoal hover:text-primary transition-colors">
+                {PHONE}
+              </a>
+              <a href={`tel:${PHONE2.replace(/\s/g, "")}`} className="font-display text-xl text-charcoal hover:text-primary transition-colors">
+                {PHONE2}
+              </a>
+            </div>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Siga-nos</div>
             <div className="mt-4 flex flex-col gap-2">
               <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-charcoal hover:text-primary transition-colors">
-                <InstagramIcon /> @talho2parceiros
+                <InstagramIcon /> @talhodoisparceiros
               </a>
               <a href={FACEBOOK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-charcoal hover:text-primary transition-colors">
                 <FacebookIcon /> Talho Dois Parceiros
