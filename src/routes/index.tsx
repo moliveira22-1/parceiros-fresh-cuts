@@ -6,6 +6,7 @@ import carne1 from "@/assets/carne-1.asset.json";
 import ossobuco from "@/assets/ossobuco.asset.json";
 import hamburguer from "@/assets/hamburguer.asset.json";
 import cogumelos from "@/assets/cogumelos.asset.json";
+import equipa from "@/assets/equipa.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -16,8 +17,11 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const INSTAGRAM = "https://www.instagram.com/talho2parceiros/";
-const FACEBOOK = "https://www.facebook.com/talho2parceiros/";
+const INSTAGRAM = "https://www.instagram.com/talhodoisparceiros/";
+const FACEBOOK = "https://www.facebook.com/profile.php?id=61569119907822&locale=pt_PT";
+const PHONE = "244 092 816";
+const PHONE2 = "919 540 615";
+const ADDRESS = "R. Sra. do Rosário 40, 2400-441 Parceiros";
 
 function Index() {
   return (
@@ -33,6 +37,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#sobre" className="hover:text-primary transition-colors">Sobre</a>
+            <a href="#historia" className="hover:text-primary transition-colors">História</a>
             <a href="#produtos" className="hover:text-primary transition-colors">Produtos</a>
             <a href="#loja" className="hover:text-primary transition-colors">A Loja</a>
             <a href="#encomendas" className="hover:text-primary transition-colors">Encomendas</a>
