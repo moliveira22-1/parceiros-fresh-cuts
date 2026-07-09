@@ -209,12 +209,11 @@ function Index() {
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="px-8 md:px-16 max-w-xl">
-              <div className="script text-4xl md:text-5xl text-cream">Feitos à mão,</div>
-              <h3 className="mt-2 font-display text-3xl md:text-4xl font-bold text-cream text-balance">
-                prontos para levar direto para o seu tacho.
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-cream text-balance">
+                Preparados à sua medida.
               </h3>
               <p className="mt-4 text-cream/85 text-lg">
-                Diga-nos o que precisa — preparamos ao seu gosto.
+                Diga-nos o que precisa — fazemos ao seu gosto.
               </p>
             </div>
           </div>
@@ -229,9 +228,6 @@ function Index() {
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold text-charcoal text-balance">
               Venha conhecer-nos <span className="script text-primary">nos Parceiros</span>.
             </h2>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Tradição, frescura e qualidade — dos melhores produtores, com cortes perfeitos e sabores únicos.
-            </p>
           </div>
 
           <div className="mt-12 grid md:grid-cols-5 gap-4">
@@ -259,10 +255,10 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32 text-center">
           <div className="text-xs font-semibold tracking-[0.3em] uppercase text-accent">Encomendas</div>
           <h2 className="mt-5 font-display text-4xl md:text-6xl font-bold text-balance">
-            Fale connosco pelas <span className="script text-accent">nossas redes sociais</span>.
+            Encomende pelas <span className="script text-accent">nossas redes sociais</span>.
           </h2>
           <p className="mt-6 text-lg text-cream/75 max-w-2xl mx-auto">
-            Pode fazer encomendas diretamente pelo Instagram ou Facebook. Respondemos rapidamente e preparamos tudo ao seu gosto para levantar em loja.
+            Instagram ou Facebook. Respondemos depressa e preparamos tudo para levantar em loja.
           </p>
 
           <div className="mt-12 flex flex-wrap justify-center gap-4">
