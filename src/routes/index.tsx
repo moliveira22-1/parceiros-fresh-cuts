@@ -62,7 +62,7 @@ function Index() {
               <span className="script text-primary font-bold text-6xl md:text-8xl block mt-2">do produtor para si.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Um talho familiar dedicado à venda de carnes frescas, preparados artesanais e produtos de qualidade — de produtores locais para a sua mesa.
+              Carnes frescas, preparados artesanais e produtos de qualidade — de produtores locais para a sua mesa.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#encomendas" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-warm)] hover:bg-accent transition-colors">
@@ -111,13 +111,10 @@ function Index() {
             </h2>
             <div className="mt-6 space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                O <strong className="text-charcoal">Talho Dois Parceiros</strong> é um talho familiar localizado nos Parceiros, Leiria. Trabalhamos com produtores locais da nossa região para garantir produtos selecionados, frescos e de confiança.
-              </p>
-              <p>
-                Todos os dias procuramos oferecer variedade — desde carnes para o dia a dia a preparados prontos a cozinhar — sempre com um atendimento próximo, personalizado e profissional.
+                Talho familiar nos Parceiros, Leiria. Trabalhamos com produtores locais para lhe entregar carnes frescas, preparados artesanais e um atendimento próximo.
               </p>
               <p className="font-display italic text-charcoal text-xl">
-                "Recebemos cada cliente como gostaríamos de ser recebidos: com simpatia, dedicação e um sorriso."
+                "Recebemos cada cliente como gostaríamos de ser recebidos."
               </p>
             </div>
           </div>
