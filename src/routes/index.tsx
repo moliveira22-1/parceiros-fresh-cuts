@@ -35,7 +35,7 @@ function Index() {
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
         <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-14 w-14 object-contain" />
+            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
             <span className="hidden sm:block font-display text-lg font-bold text-charcoal leading-tight">
               Talho <span className="script text-primary text-xl">Dois Parceiros</span>
             </span>
@@ -59,7 +59,7 @@ function Index() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-xs font-semibold tracking-wider uppercase text-primary">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Parceiros · Leiria
+              Talho familiar em Parceiros · Leiria
             </div>
             <h1 className="mt-6 font-display text-5xl md:text-7xl font-black leading-[1.02] text-balance text-charcoal">
               Os melhores cortes,
@@ -67,7 +67,7 @@ function Index() {
               <span className="script text-primary font-bold text-6xl md:text-8xl block mt-2">do produtor para si.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Carnes frescas, preparados artesanais e produtos de qualidade — de produtores locais para a sua mesa.
+              Carne fresca, preparados artesanais e produtos de qualidade — do nosso talho familiar em Leiria para a sua mesa.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#encomendas" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-warm)] hover:bg-accent transition-colors">
@@ -116,7 +116,7 @@ function Index() {
             </h2>
             <div className="mt-6 space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Talho familiar nos Parceiros, Leiria. Trabalhamos com produtores locais para lhe entregar carnes frescas, preparados artesanais e um atendimento próximo.
+                Talho familiar nos Parceiros, Leiria. Trabalhamos com produtores locais para lhe entregar carne fresca, preparados artesanais e um atendimento próximo.
               </p>
               <p className="font-display italic text-charcoal text-xl">
                 "Recebemos cada cliente como gostaríamos de ser recebidos."
@@ -296,9 +296,9 @@ function Index() {
       <footer className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-4 gap-12">
           <div>
-            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
+            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-28 w-28 object-contain" />
             <p className="mt-4 text-muted-foreground max-w-xs">
-              Carnes frescas e preparados artesanais nos Parceiros, Leiria.
+              Carne fresca e preparados artesanais do nosso talho familiar nos Parceiros, Leiria.
             </p>
           </div>
           <div>
