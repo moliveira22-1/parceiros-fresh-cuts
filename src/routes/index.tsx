@@ -62,7 +62,7 @@ function Index() {
               <span className="script text-primary font-bold text-6xl md:text-8xl block mt-2">do produtor para si.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Um talho familiar dedicado à venda de carnes frescas, preparados artesanais e produtos de qualidade — de produtores locais para a sua mesa.
+              Carnes frescas, preparados artesanais e produtos de qualidade — de produtores locais para a sua mesa.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#encomendas" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-warm)] hover:bg-accent transition-colors">
@@ -111,13 +111,10 @@ function Index() {
             </h2>
             <div className="mt-6 space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                O <strong className="text-charcoal">Talho Dois Parceiros</strong> é um talho familiar localizado nos Parceiros, Leiria. Trabalhamos com produtores locais da nossa região para garantir produtos selecionados, frescos e de confiança.
-              </p>
-              <p>
-                Todos os dias procuramos oferecer variedade — desde carnes para o dia a dia a preparados prontos a cozinhar — sempre com um atendimento próximo, personalizado e profissional.
+                Talho familiar nos Parceiros, Leiria. Trabalhamos com produtores locais para lhe entregar carnes frescas, preparados artesanais e um atendimento próximo.
               </p>
               <p className="font-display italic text-charcoal text-xl">
-                "Recebemos cada cliente como gostaríamos de ser recebidos: com simpatia, dedicação e um sorriso."
+                "Recebemos cada cliente como gostaríamos de ser recebidos."
               </p>
             </div>
           </div>
@@ -190,9 +187,9 @@ function Index() {
         {/* Product grid with real photos */}
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {[
-            { img: carne1.url, title: "Carnes frescas", desc: "Vaca, porco, borrego e aves — cortadas ao momento pelo talhante.", tag: "Diariamente" },
-            { img: hamburguer.url, title: "Preparados artesanais", desc: "Hambúrgueres, espetadas, marinados e recheios prontos a cozinhar.", tag: "Casa" },
-            { img: cogumelos.url, title: "Ideias para o jantar", desc: "Sugestões prontas para levar direto do balcão para o forno.", tag: "Novidade" },
+            { img: carne1.url, title: "Carnes frescas", desc: "Cortadas ao momento pelo talhante.", tag: "Diariamente" },
+            { img: hamburguer.url, title: "Preparados artesanais", desc: "Hambúrgueres, espetadas e marinados prontos a cozinhar.", tag: "Casa" },
+            { img: cogumelos.url, title: "Ideias para o jantar", desc: "Sugestões prontas a levar para casa.", tag: "Novidade" },
           ].map((p) => (
             <article key={p.title} className="group rounded-3xl bg-card border border-border overflow-hidden hover:shadow-[var(--shadow-warm)] transition-all hover:-translate-y-1">
               <div className="aspect-[4/3] overflow-hidden">
@@ -212,12 +209,11 @@ function Index() {
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="px-8 md:px-16 max-w-xl">
-              <div className="script text-4xl md:text-5xl text-cream">Feitos à mão,</div>
-              <h3 className="mt-2 font-display text-3xl md:text-4xl font-bold text-cream text-balance">
-                prontos para levar direto para o seu tacho.
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-cream text-balance">
+                Preparados à sua medida.
               </h3>
               <p className="mt-4 text-cream/85 text-lg">
-                Diga-nos o que precisa — preparamos ao seu gosto.
+                Diga-nos o que precisa — fazemos ao seu gosto.
               </p>
             </div>
           </div>
@@ -232,9 +228,6 @@ function Index() {
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold text-charcoal text-balance">
               Venha conhecer-nos <span className="script text-primary">nos Parceiros</span>.
             </h2>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Tradição, frescura e qualidade — dos melhores produtores, com cortes perfeitos e sabores únicos.
-            </p>
           </div>
 
           <div className="mt-12 grid md:grid-cols-5 gap-4">
@@ -262,10 +255,10 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32 text-center">
           <div className="text-xs font-semibold tracking-[0.3em] uppercase text-accent">Encomendas</div>
           <h2 className="mt-5 font-display text-4xl md:text-6xl font-bold text-balance">
-            Fale connosco pelas <span className="script text-accent">nossas redes sociais</span>.
+            Encomende pelas <span className="script text-accent">nossas redes sociais</span>.
           </h2>
           <p className="mt-6 text-lg text-cream/75 max-w-2xl mx-auto">
-            Pode fazer encomendas diretamente pelo Instagram ou Facebook. Respondemos rapidamente e preparamos tudo ao seu gosto para levantar em loja.
+            Instagram ou Facebook. Respondemos depressa e preparamos tudo para levantar em loja.
           </p>
 
           <div className="mt-12 flex flex-wrap justify-center gap-4">
@@ -291,23 +284,21 @@ function Index() {
             </a>
           </div>
 
-          <p className="mt-8 text-sm text-cream/50">Respondemos rapidamente nos nossos canais.</p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-4 gap-12">
+        <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-4 gap-12">
           <div>
             <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
             <p className="mt-4 text-muted-foreground max-w-xs">
-              Talho familiar nos Parceiros, Leiria — carnes frescas, preparados e produtos de qualidade.
+              Carnes frescas e preparados artesanais nos Parceiros, Leiria.
             </p>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Onde estamos</div>
-            <p className="mt-4 font-display text-xl text-charcoal">Parceiros</p>
-            <p className="text-muted-foreground">{ADDRESS}</p>
+            <p className="mt-4 text-muted-foreground">{ADDRESS}</p>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Contactos</div>
@@ -334,7 +325,7 @@ function Index() {
         </div>
         <div className="border-t border-border">
           <div className="mx-auto max-w-7xl px-6 py-6 flex flex-wrap justify-between items-center gap-3 text-xs text-muted-foreground">
-            <div>© {new Date().getFullYear()} Talho Dois Parceiros. Todos os direitos reservados.</div>
+            <div>© {new Date().getFullYear()} Talho Dois Parceiros.</div>
             <div className="script text-lg text-primary">Com dedicação, desde sempre.</div>
           </div>
         </div>
