@@ -33,11 +33,11 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-24 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-6 h-28 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
-            <span className="hidden sm:block font-display text-lg font-bold text-charcoal leading-tight">
-              Talho <span className="script text-primary text-xl">Dois Parceiros</span>
+            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-28 w-28 object-contain" />
+            <span className="hidden sm:block font-display text-xl font-bold text-charcoal leading-tight">
+              Talho <span className="script text-primary text-2xl">Dois Parceiros</span>
             </span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -161,22 +161,6 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-16 rounded-3xl bg-background border border-border p-8 md:p-12">
-            <blockquote className="max-w-4xl mx-auto text-center space-y-4">
-              <p className="font-display text-2xl md:text-3xl text-charcoal leading-relaxed">
-                "Há memórias que não se apagam... só mudam de lugar."
-              </p>
-              <div className="text-muted-foreground leading-relaxed space-y-2">
-                <p>Uma fotografia de outro tempo. De quando tudo começou.</p>
-                <p>Um jovem de 19 anos que comprou um talho e fez dele a sua vida. Depois veio ela e passou a ser a vida dos dois. Aprenderam juntos, trabalharam juntos, construíram juntos.</p>
-                <p>Em 2011, a crise obrigou a fechar este capítulo.</p>
-                <p>Mas há coisas que não morrem com uma porta fechada.</p>
-                <p>A paixão pelo ofício ficou. O saber fazer ficou. A vontade de voltar ficou.</p>
-                <p>E cá estamos.</p>
-                <p>Não é o mesmo espaço mas é a mesma essência. As mesmas mãos, o mesmo cuidado, a mesma dedicação de sempre.</p>
-              </div>
-            </blockquote>
-          </div>
         </div>
       </section>
 
@@ -321,7 +305,7 @@ function Index() {
       <footer className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-4 gap-12">
           <div>
-            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-28 w-28 object-contain" />
+            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-36 w-36 object-contain" />
             <p className="mt-4 text-muted-foreground max-w-xs">
               Carne fresca e preparados artesanais do nosso talho familiar nos Parceiros, Leiria.
             </p>
