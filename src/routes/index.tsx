@@ -284,23 +284,21 @@ function Index() {
             </a>
           </div>
 
-          <p className="mt-8 text-sm text-cream/50">Respondemos rapidamente nos nossos canais.</p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-4 gap-12">
+        <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-4 gap-12">
           <div>
             <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
             <p className="mt-4 text-muted-foreground max-w-xs">
-              Talho familiar nos Parceiros, Leiria — carnes frescas, preparados e produtos de qualidade.
+              Carnes frescas e preparados artesanais nos Parceiros, Leiria.
             </p>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Onde estamos</div>
-            <p className="mt-4 font-display text-xl text-charcoal">Parceiros</p>
-            <p className="text-muted-foreground">{ADDRESS}</p>
+            <p className="mt-4 text-muted-foreground">{ADDRESS}</p>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Contactos</div>
@@ -327,7 +325,7 @@ function Index() {
         </div>
         <div className="border-t border-border">
           <div className="mx-auto max-w-7xl px-6 py-6 flex flex-wrap justify-between items-center gap-3 text-xs text-muted-foreground">
-            <div>© {new Date().getFullYear()} Talho Dois Parceiros. Todos os direitos reservados.</div>
+            <div>© {new Date().getFullYear()} Talho Dois Parceiros.</div>
             <div className="script text-lg text-primary">Com dedicação, desde sempre.</div>
           </div>
         </div>
