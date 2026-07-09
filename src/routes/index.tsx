@@ -329,6 +329,15 @@ function Index() {
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Onde estamos</div>
             <p className="mt-4 text-muted-foreground">{ADDRESS}</p>
+            <div className="mt-6 text-xs font-bold tracking-[0.2em] uppercase text-primary">Horário</div>
+            <ul className="mt-3 space-y-1 text-muted-foreground text-sm">
+              {HOURS.map((h) => (
+                <li key={h.day} className="flex justify-between gap-4">
+                  <span>{h.day}</span>
+                  <span className="font-medium text-charcoal">{h.time}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Contactos</div>
