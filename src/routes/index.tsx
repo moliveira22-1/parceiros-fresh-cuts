@@ -33,7 +33,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-6 h-24 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
             <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
             <span className="hidden sm:block font-display text-lg font-bold text-charcoal leading-tight">
