@@ -39,6 +39,7 @@ function Index() {
             <a href="#sobre" className="hover:text-primary transition-colors">Sobre</a>
             <a href="#historia" className="hover:text-primary transition-colors">História</a>
             <a href="#produtos" className="hover:text-primary transition-colors">Produtos</a>
+            <a href="#produtos" className="hover:text-primary transition-colors">Produtos</a>
             <a href="#loja" className="hover:text-primary transition-colors">A Loja</a>
             <a href="#encomendas" className="hover:text-primary transition-colors">Encomendas</a>
           </nav>
