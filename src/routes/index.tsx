@@ -187,9 +187,9 @@ function Index() {
         {/* Product grid with real photos */}
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {[
-            { img: carne1.url, title: "Carnes frescas", desc: "Vaca, porco, borrego e aves — cortadas ao momento pelo talhante.", tag: "Diariamente" },
-            { img: hamburguer.url, title: "Preparados artesanais", desc: "Hambúrgueres, espetadas, marinados e recheios prontos a cozinhar.", tag: "Casa" },
-            { img: cogumelos.url, title: "Ideias para o jantar", desc: "Sugestões prontas para levar direto do balcão para o forno.", tag: "Novidade" },
+            { img: carne1.url, title: "Carnes frescas", desc: "Cortadas ao momento pelo talhante.", tag: "Diariamente" },
+            { img: hamburguer.url, title: "Preparados artesanais", desc: "Hambúrgueres, espetadas e marinados prontos a cozinhar.", tag: "Casa,asa" },
+            { img: cogumelos.url, title: "Ideias para o jantar", desc: "Sugestões prontas a levar para casa.", tag: "Novidade" },
           ].map((p) => (
             <article key={p.title} className="group rounded-3xl bg-card border border-border overflow-hidden hover:shadow-[var(--shadow-warm)] transition-all hover:-translate-y-1">
               <div className="aspect-[4/3] overflow-hidden">
