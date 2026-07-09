@@ -21,16 +21,21 @@ const INSTAGRAM = "https://www.instagram.com/talhodoisparceiros/";
 const FACEBOOK = "https://www.facebook.com/profile.php?id=61569119907822&locale=pt_PT";
 const PHONE = "244 092 816";
 const PHONE2 = "919 540 615";
-const ADDRESS = "R. Sra. do Rosário 40, 2400-441 Parceiros";
+const ADDRESS = "R. Sra. do Rosário 40, 2400-441 Parceiros, Portugal";
+const HOURS = [
+  { day: "Segunda a sexta", time: "08h30 – 20h00" },
+  { day: "Sábado", time: "08h30 – 19h00" },
+  { day: "Domingo", time: "Fechado" },
+];
 
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-6 h-24 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-14 w-14 object-contain" />
+            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
             <span className="hidden sm:block font-display text-lg font-bold text-charcoal leading-tight">
               Talho <span className="script text-primary text-xl">Dois Parceiros</span>
             </span>
@@ -54,7 +59,7 @@ function Index() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-xs font-semibold tracking-wider uppercase text-primary">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Parceiros · Leiria
+              Talho familiar em Parceiros · Leiria
             </div>
             <h1 className="mt-6 font-display text-5xl md:text-7xl font-black leading-[1.02] text-balance text-charcoal">
               Os melhores cortes,
@@ -62,7 +67,7 @@ function Index() {
               <span className="script text-primary font-bold text-6xl md:text-8xl block mt-2">do produtor para si.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Carnes frescas, preparados artesanais e produtos de qualidade — de produtores locais para a sua mesa.
+              Carne fresca, preparados artesanais e produtos de qualidade — do nosso talho familiar em Leiria para a sua mesa.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#encomendas" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-warm)] hover:bg-accent transition-colors">
@@ -111,7 +116,7 @@ function Index() {
             </h2>
             <div className="mt-6 space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Talho familiar nos Parceiros, Leiria. Trabalhamos com produtores locais para lhe entregar carnes frescas, preparados artesanais e um atendimento próximo.
+                Talho familiar nos Parceiros, Leiria. Trabalhamos com produtores locais para lhe entregar carne fresca, preparados artesanais e um atendimento próximo.
               </p>
               <p className="font-display italic text-charcoal text-xl">
                 "Recebemos cada cliente como gostaríamos de ser recebidos."
@@ -239,13 +244,38 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-10 grid sm:grid-cols-4 gap-4">
-            {["Tradição", "Frescura e qualidade", "Cortes perfeitos", "Sabores únicos"].map((v) => (
-              <div key={v} className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
-                <div className="text-primary text-lg">★</div>
-                <div className="mt-1 font-display font-bold text-charcoal">{v}</div>
-              </div>
-            ))}
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Tradição</div>
+            </div>
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Carne fresca</div>
+            </div>
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Cortes perfeitos</div>
+            </div>
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Família</div>
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-3xl bg-background border border-border p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <h3 className="font-display text-2xl font-bold text-charcoal">Horário de funcionamento</h3>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {HOURS.map((h) => (
+                <div key={h.day} className="rounded-2xl bg-cream border border-border px-5 py-4 text-center">
+                  <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">{h.day}</div>
+                  <div className={`mt-1 font-display text-xl font-bold ${h.time === "Fechado" ? "text-primary" : "text-charcoal"}`}>{h.time}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -291,14 +321,23 @@ function Index() {
       <footer className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-4 gap-12">
           <div>
-            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-20 w-20 object-contain" />
+            <img src={logoAsset.url} alt="Talho Dois Parceiros" className="h-28 w-28 object-contain" />
             <p className="mt-4 text-muted-foreground max-w-xs">
-              Carnes frescas e preparados artesanais nos Parceiros, Leiria.
+              Carne fresca e preparados artesanais do nosso talho familiar nos Parceiros, Leiria.
             </p>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Onde estamos</div>
             <p className="mt-4 text-muted-foreground">{ADDRESS}</p>
+            <div className="mt-6 text-xs font-bold tracking-[0.2em] uppercase text-primary">Horário</div>
+            <ul className="mt-3 space-y-1 text-muted-foreground text-sm">
+              {HOURS.map((h) => (
+                <li key={h.day} className="flex justify-between gap-4">
+                  <span>{h.day}</span>
+                  <span className="font-medium text-charcoal">{h.time}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           <div>
             <div className="text-xs font-bold tracking-[0.2em] uppercase text-primary">Contactos</div>
