@@ -21,7 +21,12 @@ const INSTAGRAM = "https://www.instagram.com/talhodoisparceiros/";
 const FACEBOOK = "https://www.facebook.com/profile.php?id=61569119907822&locale=pt_PT";
 const PHONE = "244 092 816";
 const PHONE2 = "919 540 615";
-const ADDRESS = "R. Sra. do Rosário 40, 2400-441 Parceiros";
+const ADDRESS = "R. Sra. do Rosário 40, 2400-441 Parceiros, Portugal";
+const HOURS = [
+  { day: "Segunda a sexta", time: "08h30 – 20h00" },
+  { day: "Sábado", time: "08h30 – 19h00" },
+  { day: "Domingo", time: "Fechado" },
+];
 
 function Index() {
   return (
