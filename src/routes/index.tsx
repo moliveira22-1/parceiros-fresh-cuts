@@ -244,13 +244,38 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-10 grid sm:grid-cols-4 gap-4">
-            {["Tradição", "Frescura e qualidade", "Cortes perfeitos", "Sabores únicos"].map((v) => (
-              <div key={v} className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
-                <div className="text-primary text-lg">★</div>
-                <div className="mt-1 font-display font-bold text-charcoal">{v}</div>
-              </div>
-            ))}
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Tradição</div>
+            </div>
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Carne fresca</div>
+            </div>
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Cortes perfeitos</div>
+            </div>
+            <div className="rounded-2xl bg-background border border-border px-5 py-4 text-center">
+              <div className="text-primary text-lg">★</div>
+              <div className="mt-1 font-display font-bold text-charcoal">Família</div>
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-3xl bg-background border border-border p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <h3 className="font-display text-2xl font-bold text-charcoal">Horário de funcionamento</h3>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {HOURS.map((h) => (
+                <div key={h.day} className="rounded-2xl bg-cream border border-border px-5 py-4 text-center">
+                  <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">{h.day}</div>
+                  <div className={`mt-1 font-display text-xl font-bold ${h.time === "Fechado" ? "text-primary" : "text-charcoal"}`}>{h.time}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
