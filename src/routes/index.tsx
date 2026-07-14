@@ -1,12 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/logo.png.asset.json";
-import lojaExterior from "@/assets/loja-exterior.asset.json";
-import lojaEntrada from "@/assets/loja-entrada.asset.json";
-import carne1 from "@/assets/carne-1.asset.json";
-import ossobuco from "@/assets/ossobuco.asset.json";
-import hamburguer from "@/assets/hamburguer.asset.json";
-import cogumelos from "@/assets/cogumelos.asset.json";
-import equipa from "@/assets/equipa.png.asset.json";
+import logoUrl from "@/assets/logo.png";
+import lojaExteriorUrl from "@/assets/loja-exterior.png";
+import lojaEntradaUrl from "@/assets/loja-entrada.jpg";
+import carne1Url from "@/assets/carne-1.png";
+import ossobucoUrl from "@/assets/ossobuco.png";
+import hamburguerUrl from "@/assets/hamburguer.png";
+import cogumelosUrl from "@/assets/cogumelos.png";
+import equipaUrl from "@/assets/equipa.png";
+const logoAsset = { url: logoUrl };
+const lojaExterior = { url: lojaExteriorUrl };
+const lojaEntrada = { url: lojaEntradaUrl };
+const carne1 = { url: carne1Url };
+const ossobuco = { url: ossobucoUrl };
+const hamburguer = { url: hamburguerUrl };
+const cogumelos = { url: cogumelosUrl };
+const equipa = { url: equipaUrl };
 
 export const Route = createFileRoute("/")({
   component: Index,
